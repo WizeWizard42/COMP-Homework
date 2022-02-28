@@ -1,27 +1,18 @@
 #include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
 int main() {
-   int stop;
-   int result;
-   int a;
-   int b;
+   char* userStr = new char[27];
 
-   cin >> stop;
-   result = 0;
-
-   for (a = 0; a < 4; ++a) {
-      cout << a << ": ";
-      for (b = 0; b < 3; ++b) {
-         result += a + b;
-         if (result > stop) {
-            cout << "_ ";
-            continue;
-         }
-         cout << result << ",";
-      }
-      cout << endl;
+   for (int i = 0; i < 26; i++)
+   {
+      userStr[i] = 'A' + i;
    }
+   userStr[26] = '\0';
+
+   cout << userStr << endl;
 
    return 0;
 }
